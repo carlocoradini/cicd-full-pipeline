@@ -7,6 +7,11 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
+
+untrusted_types = sio.get_untrusted_types()
+print(untrusted_types)
+
+
 ## Loading the Data
 drug_df = pd.read_csv("Data/drug.csv")
 drug_df = drug_df.sample(frac=1)
